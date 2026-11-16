@@ -131,6 +131,80 @@ export const phases={
       },
       "headers": {}
     }
+  ],
+  "interrupted": [
+    {
+      "path": "/waveforms",
+      "body": {
+        "message": "来源连接中断"
+      },
+      "method": "GET",
+      "status": 500,
+      "query": {
+        "cursor": "1"
+      },
+      "headers": {}
+    }
+  ],
+  "overlap": [
+    {
+      "path": "/waveforms",
+      "body": {
+        "records": [
+          {
+            "recordId": "o1",
+            "sourceIdentifier": "XX.STA.00.BHZ",
+            "startNs": "1794614400000000000",
+            "intervalNs": "10000000",
+            "samples": [
+              1,
+              2,
+              1
+            ],
+            "timeCorrectionNs": "0",
+            "correctionApplied": true,
+            "timingQuality": 85,
+            "replacementOf": null
+          },
+          {
+            "recordId": "o2",
+            "sourceIdentifier": "XX.STA.00.BHZ",
+            "startNs": "1794614400020000000",
+            "intervalNs": "10000000",
+            "samples": [
+              3,
+              4,
+              3
+            ],
+            "timeCorrectionNs": "500",
+            "correctionApplied": false,
+            "timingQuality": 70,
+            "replacementOf": null
+          },
+          {
+            "recordId": "o3",
+            "sourceIdentifier": "XX.STA.00.BHZ",
+            "startNs": "1794614400070000000",
+            "intervalNs": "10000000",
+            "samples": [
+              5,
+              6
+            ],
+            "timeCorrectionNs": "0",
+            "correctionApplied": true,
+            "timingQuality": 90,
+            "replacementOf": null
+          }
+        ],
+        "next": null
+      },
+      "method": "GET",
+      "status": 200,
+      "query": {
+        "cursor": "0"
+      },
+      "headers": {}
+    }
   ]
 };
 export const portalKind="";
